@@ -465,6 +465,18 @@ Step 9: Emperor plots for PCoA visualization
      --m-metadata-file metadata_combined.tsv \
      --o-visualization merged-bray-curtis-emperor.qzv
 
+.. figure:: im4_braycurtis.png
+   :alt: Bray-Curtis (Blue: 16s, Red: WGS)
+   Bray-Curtis (Blue: 16s, Red: WGS)
+
+.. figure:: im5_uwunifrac.png
+   :alt: Unweighted UniFrac (Blue: 16s, Red: WGS)
+   Unweighted UniFrac (Blue: 16s, Red: WGS)
+
+.. figure:: im6_wunifrac.png
+   :alt: Weighted UniFrac (Blue: 16s, Red: WGS)
+   Weighted UniFrac (Blue: 16s, Red: WGS)
+
 View all .qzv files at https://view.qiime2.org !
 
 For non-V4 data, check out this `forum post <https://forum.qiime2.org/t/introducing-greengenes2-2022-10/25291>`_ by Daniel McDonald.
