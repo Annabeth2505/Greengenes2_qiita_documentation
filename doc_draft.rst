@@ -199,7 +199,8 @@ However, for this tutorial I will be using the tree since it is more decompresse
    wget ftp://ftp.microbio.me/greengenes_release/2024.09/2024.09.taxonomy.asv.nwk.qza
    wget ftp://ftp.microbio.me/greengenes_release/2024.09/2024.09.phylogeny.asv.nwk.qza
 
- Step 2: Modifying metadata file to make it compatible with our combined PCoA workflow
+ 
+Step 2: Modifying metadata file to make it compatible with our combined PCoA workflow
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 At the moment, the metadata file has the following format:
@@ -236,7 +237,7 @@ and use the exact code.
      print OFS "16S"
    }' metadata_added_cols.tsv > metadata_16s.tsv
 
- - creating a WGS metadata where the indices are now of the form sample-name_wgs + add a sequencing_type column for better visualization
+- creating a WGS metadata where the indices are now of the form sample-name_wgs + add a sequencing_type column for better visualization
 
 .. code-block:: bash
 
@@ -259,7 +260,7 @@ and use the exact code.
    cat metadata_16s.tsv > metadata_combined.tsv
    tail -n +2 metadata_wgs.tsv >> metadata_combined.tsv
 
- Step 3: Filter features against the tree
+Step 3: Filter features against the tree
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This step, although optional, is recommended. It allows us to filter our features from the
@@ -286,7 +287,8 @@ tree and outputs an updated table which only contains the features that match.
      --o-filtered-feature-table wgs-filtered.qza \
      --verbose
 
- Step 4: Assigning taxonomy to 16S and WGS
+ 
+Step 4: Assigning taxonomy to 16S and WGS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Now that we are only working with features that are represented in the reference tree, we
@@ -313,7 +315,8 @@ genomic units.
      --o-classification meta-taxonomy.qza \
      --verbose
 
- Step 5: Create visualizations
+ 
+Step 5: Create visualizations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **16S:**
@@ -378,7 +381,8 @@ Step 6: Merge feature tables and taxonomies
      --m-metadata-file metadata_combined.tsv \
      --o-visualization merged-taxa-barplot.qzv
 
- Step 7: Calculating distance matrices (using all distance metrics)
+ 
+Step 7: Calculating distance matrices (using all distance metrics)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Using weighted UniFrac:
@@ -412,7 +416,8 @@ Using Bray-Curtis:
      --p-metric braycurtis \
      --o-distance-matrix merged-bray-curtis.qza
 
- Step 8: Combined 16s + WGS PCoA
+ 
+Step 8: Combined 16s + WGS PCoA
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Using weighted UniFrac distance matrix:
@@ -439,7 +444,8 @@ Using Bray-Curtis distance matrix:
      --i-distance-matrix merged-bray-curtis.qza \
      --o-pcoa merged-bray-curtis-pcoa.qza
 
- Step 9: Emperor plots for PCoA visualization
+ 
+Step 9: Emperor plots for PCoA visualization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
