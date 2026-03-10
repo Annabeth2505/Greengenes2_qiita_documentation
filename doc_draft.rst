@@ -470,12 +470,15 @@ Step 9: Emperor plots for PCoA visualization
      --o-visualization merged-bray-curtis-emperor.qzv
 
 .. figure:: im4_braycurtis.png
+
    Bray-Curtis (Blue: 16s, Red: WGS)
 
 .. figure:: im5_uwunifrac.png
+
    Unweighted UniFrac (Blue: 16s, Red: WGS)
 
 .. figure:: im6_wunirac.png
+
    Weighted UniFrac (Blue: 16s, Red: WGS)
 
 View all .qzv files at https://view.qiime2.org !
