@@ -181,12 +181,14 @@ Important checks before starting the assignment-
    biom head -i exported_table/feature-table.biom
 
  The output should look something like this (or at least of the same format)
+.. figure:: im1.png
 
 This step determines the type of Greengenes2 file you will need to use for your particular
 feature ID format. In this case, since the feature IDs are DNA sequences, we will choose the
 .asv file. (look out for numbers? or MD5 hashes- .md5 files)
 
 - WGS table: feature IDs are genome IDs (often look like G000012345)
+.. figure:: im2.png
 
 Step 1: Download the reference trees from the internet
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -347,6 +349,8 @@ Step 5: Create visualizations
      --m-metadata-file metadata_wgs.tsv \
      --o-visualization meta-taxa-barplot.qzv
 
+.. figure:: im3.png
+
 This is a snapshot of the 16s artifact visualization. The bar chart can be filtered for multiple
 taxonomic levels ranging from Level 1 through Level 7.
 
@@ -466,15 +470,12 @@ Step 9: Emperor plots for PCoA visualization
      --o-visualization merged-bray-curtis-emperor.qzv
 
 .. figure:: im4_braycurtis.png
-   :alt: Bray-Curtis (Blue: 16s, Red: WGS)
    Bray-Curtis (Blue: 16s, Red: WGS)
 
 .. figure:: im5_uwunifrac.png
-   :alt: Unweighted UniFrac (Blue: 16s, Red: WGS)
    Unweighted UniFrac (Blue: 16s, Red: WGS)
 
-.. figure:: im6_wunifrac.png
-   :alt: Weighted UniFrac (Blue: 16s, Red: WGS)
+.. figure:: im6_wunirac.png
    Weighted UniFrac (Blue: 16s, Red: WGS)
 
 View all .qzv files at https://view.qiime2.org !
