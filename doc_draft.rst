@@ -1,3 +1,8 @@
+.. _gg2_qiita_tutorial:
+
+.. index:: gg2_qiita_tutorial
+
+
 USING GREENGENES2 THROUGH QIITA TO COMBINE 16S AND WGS DATA AND ASSIGN TAXONOMY TO 16S
 ========================================================================================
 
